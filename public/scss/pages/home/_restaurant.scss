@@ -1,0 +1,95 @@
+// import here
+@use "../../costumize" as *;
+@use "../../components/mixins" as *;
+
+// restaurant section
+@include jump;
+.rsp {
+    background-image: $light-gradient-y;
+
+    object {
+        width: 275;
+        animation: jump 1s linear infinite alternate !important;
+    }
+
+    h2 { text-shadow: 1px 1px 2px $gray-500; }
+    h4 { font-weight: 600; }
+    p { text-align: justify; }
+    &-template { border-top: 1px solid $gray-600; }
+
+    main {
+        p { font-size: 0.9em; }
+    }
+
+    section {
+        h4 { font-size: 1em; }
+        p { font-size: 0.8em; }
+        @include media-breakpoint-down(lg) { display: none !important; }
+    }
+}
+
+.restaurant {
+    background-image: $light-gradient-y;
+
+    object {
+        width: 275;
+        animation: jump 1s linear infinite alternate !important;
+    }
+
+    h2 { 
+        text-shadow: 1px 1px 2px $gray-500; 
+        border-bottom: 1px solid $gray-600;
+    }
+
+    .restaurant-item {
+        height: 200px;
+
+        img { 
+            object-fit: cover; 
+            opacity: 0.8;
+            border-radius: 2px;
+            cursor: pointer;
+            @include transition-to-all-25;
+
+            &:hover { opacity: 1; }
+            &:active { opacity: 0.8; }
+        }
+    }
+
+    .details {
+        height: fit-content;
+        border-top: 1px solid $gray-600;
+
+        img {
+            object-fit: cover; 
+            height: 250px;
+            border-radius: 4px;
+        }
+
+        h3 { text-shadow: 1px 1px 2px $gray-500; color: $dark; }
+        h4 { font-size: 1.15em; color: $gray-700 !important; }
+        h5 { font-size: 1em; color: $gray-700 !important; }
+
+        p {
+            font-size: 0.9em;
+            text-align: justify;
+        }
+
+        .next {
+            height: 150px;
+
+            img { height: 100%; float: left; }
+
+            .col-lg-6 {
+                border-radius: 5px;
+                border-bottom: 0.5em solid rgba($gray-600, 0);
+                cursor: pointer;
+                text-decoration: none;
+                @include transition-to-all-25;
+
+                &:hover { border-bottom: 0.5em solid rgba($gray-600, 0.75) !important; }
+                &:active { border-bottom: 0.15em solid rgba($gray-600, 0.75) !important; }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+// import here
+@use "../costumize" as *;
+@use "../components/mixins" as *;
+
+// font families
+.open-sans { font-family: 'Open Sans', sans-serif; }
+.kaushan-script { font-family: 'Kaushan Script', cursive; }
+
+// trigger classes
+.active { color: $dark-coffee !important; }
+
+// button
+button { border-radius: 2px; }
+
+// visibility
+.remove { display: none !important; }

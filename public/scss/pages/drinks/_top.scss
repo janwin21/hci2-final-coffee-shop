@@ -1,0 +1,79 @@
+// import here
+@use "../../costumize" as *;
+@use "../../components/mixins" as *;
+
+// top section
+@include pulse;
+.top {
+    min-height: 600px;
+
+    object {
+        width: 200px;
+    }
+
+    .btn-success {
+        border-radius: 20px;
+        @include transition-to-all-25;
+        animation: pulse 1s linear infinite alternate;
+        &:active { background-color: $light; }
+    }
+
+    p {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+
+    form {
+        .primary, .secondary, .coffee, .confirm {
+            background-color: $dark-coffee;
+            min-height: 500px;
+        }
+
+        .primary {
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+        }
+
+        .fill {
+            border-left: 1px solid $dark-coffee;
+            border-right: 1px solid $dark-coffee;
+        }
+
+        .fill-3 {
+            .card {
+                height: 200px;
+
+                img { object-fit: cover; }
+
+                .card-img-overlay {
+                    background-color: rgba($gray-900, 0.5);
+                    @include transition-to-all-25;
+
+                    h5 { font-size: 1em; text-transform: capitalize; }
+                    p { font-size: 0.9em; }
+                }
+
+                &:hover {
+                    .card-img-overlay { background-color: rgba($gray-900, 0); }
+                }
+            }
+        }
+
+        .fill-4 {
+            border-bottom: 1px solid $dark-coffee;
+            h4 { font-size: 1.1em; }
+            p { font-size: 1em; }
+            button { font-size: 0.9em; }
+
+            table {
+                tr {
+                    td, th { 
+                        padding: 0.5em;
+                        border: 1px solid $gray-800; 
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}

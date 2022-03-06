@@ -1,0 +1,31 @@
+// import here
+@use "../../costumize" as *;
+@use "../../components/mixins" as *;
+
+// header section
+@include pulse; @include jump;
+.header {
+    height: 500px;
+    .row { height: 100%; }
+
+    h5.lead {
+        font-weight: 400; font-size: 1em;
+        color: $gray-600; 
+        animation: pulse 1s linear infinite alternate;
+    }
+
+    h2 {
+        font-size: 5em; color: $dark-coffee;
+        text-shadow: 1px 1px 3px $gray-500;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    img {
+        width: 350px; opacity: 0.7;
+        animation: jump 1s linear infinite alternate !important;
+        @include media-breakpoint-down(lg) { display: none !important; }
+    }
+}

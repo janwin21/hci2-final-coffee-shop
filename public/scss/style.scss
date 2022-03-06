@@ -1,0 +1,16 @@
+// import costumize containing all bootstrap snippets
+@use "costumize";
+
+// import all components
+@use "../scss/components/typography";
+@use "../scss/components/mixins";
+@use "../scss/components/navbar";
+@use "../scss/components/footer";
+
+// import all sections through pages
+// HOME
+@use "../scss/pages/home/header";
+@use "../scss/pages/home/restaurant";
+
+// DRINKS
+@use "../scss/pages/drinks/top";

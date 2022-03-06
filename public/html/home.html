@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+
+    <!-- Google Fonts Connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- List of Font Families -->
+    <!-- 'Open Sans', sans-serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- 'Kaushan Script', cursive -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome.css" media="screen">
+
+    <!-- JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- JQuery CDN -->
+    <script src="../js/model/rspcomponent.js"></script><!-- RSP Model -->
+    <script src="../js/model/setting.js"></script><!-- Restaurant Setting Model -->
+    <script src="../js/pages/home.js"></script><!-- Home Page -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-0 py-2 sticky-top">
+        <div class="container">
+
+            <!-- Navbar Brand -->
+            <a class="navbar-brand kaushan-script" href="#">Coffee</a>
+
+            <!-- Navbar Nav -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                <li class="nav-item"><a class="nav-link open-sans ms-2 active" aria-current="page" href="#">
+                    Home
+                </a></li>
+                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#">
+                    Drinks
+                </a></li>
+                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#benefits">
+                    Benefits
+                </a></li>
+                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#coffee-detail">
+                    Restaurants
+                </a></li>
+                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#">
+                    About Us
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h5 class="lead mb-0 open-sans mt-5"><i>Feel Tired?</i></h5>
+                <h5 class="lead mt-0 open-sans"><i>Take a look for a while...</i></h5>
+                <h2 class="kaushan-script my-5">Coffee Shop</h2>
+                <p class="open-sans my-5">Olé! Life is good when it starts with a great cup of coffee. Love is brewing the perfect cup of coffee, one sip at a time. The aroma that welcomes you in the morning</p>
+                <button class="btn btn-outline-primary shadow-none py-1 px-5" type="button">Relax & Drink</button>
+            </div>
+            <div class="col-lg-6 text-end">
+                <img src="../images/items/png/coffee-item-1.png" alt="header-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- (RSP) Coffee Restaurant Short Paragraphs -->
+    <div class="rsp container-fluid mt-5 py-5" id="benefits">
+        <div class="container text-center">
+            <object class="mt-5" data="../svg/benefits.svg"></object>
+            <h2 class="open-sans text-primary my-5 pt-4 text-center">Benefits of Coffee</h2>
+        </div>
+    </div>
+
+    <!-- Restaurant Collections -->
+    <div class="restaurant container-fluid text-center mb-5 pb-5">
+        <div class="container">
+            <object class="mt-5 mb-3" data="../svg/restaurant.svg"></object>
+            <h2 class="my-5 pb-5 text-primary open-sans">Visit Our Coffee Restaurant</h2>
+            <div class="row" id="collection"></div>
+            <!-- Navigation Start -->
+            <div id="coffee-detail"></div>
+
+            <!-- Details -->
+            <div class="details row px-0 mx-0 mt-5 py-5"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark">
+        <div class="container pt-3 pb-5">
+            <div class="text-center"><i class="fa-solid fa-mug-saucer py-2"></i></div>
+            <div class="row mt-3 pt-4 first">
+                <div class="col-lg-4 pe-5">
+                    <h5 class="mb-4"><i class="fa-solid fa-user-graduate me-3"></i>For Education</h5>
+                    <p class="lato">Education, freedom and knowledge. These are the pillars for higher learning, but have often been used to describe some open source projects and services that have the potential to be abused by those that are not so innocent. Over the last two years, tools like stressers, Remote Administration Tools (RAT) and ransomware have been published under these pretenses, but do they serve a legitimate purpose?</p>
+                    <h5 class="mb-4"><i class="fa-solid fa-tv mt-5 me-3"></i>IT22S3 - HCI2</h5>
+                    <p class="lato">Human–computer interaction (HCI) is research in the design and the use of computer technology, which focuses on the interfaces between people (users) and computers. HCI researchers observe the ways humans interact with computers and design technologies that allow humans to interact with computers in novel ways.</p>
+                </div>
+                <div class="col-lg-4 pe-5">
+                    <h5 class="mb-4"><i class="fa-solid fa-cat me-3"></i>Categories</h5>
+                    <ul>
+                        <li><p class="m-0 p-0">Coffee</p></li>
+                        <li><p class="m-0 p-0">Soda</p></li>
+                        <li><p class="m-0 p-0">Tea</p></li>
+                        <li><p class="m-0 p-0">Restaurant</p></li>
+                        <li><p class="m-0 p-0">Location</p></li>
+                        <li><p class="m-0 p-0">Delivery</p></li>
+                        <li><p class="m-0 p-0">Payment</p></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4"><i class="fa-solid fa-newspaper me-3"></i>Content</h5>
+                    <ul>
+                        <li><p class="m-0 p-0">Drinks</p></li>
+                        <li><p class="m-0 p-0">Restaurant & Settings</p></li>
+                        <li><p class="m-0 p-0">Coffee</p></li>
+                        <li><p class="m-0 p-0">Tea</p></li>
+                        <li><p class="m-0 p-0">Soda</p></li>
+                    </ul>
+                    <h5 class="my-4"><i class="fa-solid fa-tags mt-2 me-3"></i>Tags</h5>
+                    <ul class="d-flex flex-row flex-wrap p-0 m-0">
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">HTML</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">CSS</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">JavaScript</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1"><i class="fa-solid fa-star me-2"></i>JQuery</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1"><i class="fa-solid fa-star me-2"></i>Bootstrap</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">Node JS</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">SASS</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">Fontawesome</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">Google Fonts</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">unDraw</p></li>
+                        <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1"><i class="fa-solid fa-star me-2"></i>Firebase</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <h5 class="pb-4 pt-2 mt-5 open-sans">Powered By:</h5>
+            <div class="row mb-5">
+                <div class="powered col-lg-4">
+                    <i class="fa-brands fa-js-square"></i>
+                </div>
+                <div class="powered col-lg-4">
+                    <i class="fa-brands fa-bootstrap"></i>
+                </div>
+                <div class="powered col-lg-4">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright container">
+            <div class="row pt-4 pb-2">
+                <div class="w-50">
+                    <p><strong>&copy;</strong> 2022 <strong>Finalized Ouput Coffee Shop</strong>, developed by <strong>HCI Coffee Group</strong></p>
+                </div>
+                <div class="w-50 d-flex flex-row justify-content-end align-items-start">
+                    <i class="fa-brands fa-facebook me-2"></i>
+                    <i class="fa-brands fa-twitter me-2"></i>
+                    <i class="fa-brands fa-instagram me-2"></i>
+                    <i class="fa-brands fa-google me-2"></i>
+                    <i class="fa-brands fa-youtube me-2"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

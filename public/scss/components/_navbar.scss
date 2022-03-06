@@ -1,0 +1,22 @@
+// import here
+@use "../costumize" as *;
+@use "../components/mixins" as *;
+
+// navigation section
+.navbar {
+    @include media-breakpoint-down(md) { display: none !important; }
+
+    .navbar-brand {
+        color: $dark-coffee !important;
+        font-size: 1.5em;
+        @include transition-to-all-25;
+        &:hover { color: $gray-800 !important; }
+    }
+
+    .nav-link { 
+        @include media-breakpoint-down(lg) { display: none !important; }
+        font-size: 0.9em; font-weight: 400;
+        color: $gray-900;
+        text-shadow: 0 0 1px $gray-500;
+    }
+}
