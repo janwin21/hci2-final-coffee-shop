@@ -3,12 +3,13 @@
 @use "../../components/mixins" as *;
 
 // top section
-@include pulse;
+@include pulse; @include jump;
 .top {
     min-height: 600px;
 
     object {
         width: 200px;
+        animation: jump 1s linear infinite alternate !important;
     }
 
     .btn-success {
@@ -24,6 +25,13 @@
     }
 
     form {
+        @include media-breakpoint-down(lg) {
+            label { display: none; }
+            input[type=text], input[type=email] { margin-bottom: 2rem; }
+            input[type=number] { width: 40% !important; }
+            .add, .subtract { width: 20% !important; font-size: 0.75em; }
+        }
+
         .primary, .secondary, .coffee, .confirm {
             background-color: $dark-coffee;
             min-height: 500px;

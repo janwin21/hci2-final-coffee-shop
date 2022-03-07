@@ -11194,6 +11194,11 @@ footer .first, footer .copyright {
 footer object {
   width: 250px;
 }
+@media (max-width: 767.98px) {
+  footer .footer-content, footer .footer-tags {
+    margin-top: 2rem;
+  }
+}
 footer ul {
   list-style-type: none;
   padding: 0 !important;
@@ -11389,11 +11394,20 @@ footer .copyright i:active {
     opacity: 1;
   }
 }
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
 .top {
   min-height: 600px;
 }
 .top object {
   width: 200px;
+  animation: jump 1s linear infinite alternate !important;
 }
 .top .btn-success {
   border-radius: 20px;
@@ -11406,6 +11420,21 @@ footer .copyright i:active {
 .top p {
   font-size: 0.9em;
   font-weight: 400;
+}
+@media (max-width: 991.98px) {
+  .top form label {
+    display: none;
+  }
+  .top form input[type=text], .top form input[type=email] {
+    margin-bottom: 2rem;
+  }
+  .top form input[type=number] {
+    width: 40% !important;
+  }
+  .top form .add, .top form .subtract {
+    width: 20% !important;
+    font-size: 0.75em;
+  }
 }
 .top form .primary, .top form .secondary, .top form .coffee, .top form .confirm {
   background-color: #90604C;
@@ -11455,6 +11484,53 @@ footer .copyright i:active {
   padding: 0.5em;
   border: 1px solid #343a40;
   text-transform: capitalize;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+.queue object {
+  width: 200px;
+  animation: jump 1s linear infinite alternate !important;
+}
+.queue p {
+  font-size: 0.9em;
+}
+.queue .text-start {
+  border-top: 1px solid #90604C;
+}
+.queue .fill-4 h4 {
+  font-size: 1.1em;
+}
+.queue .fill-4 p {
+  font-size: 1em;
+}
+.queue .fill-4 button {
+  font-size: 0.9em;
+}
+.queue .fill-4 table tr td, .queue .fill-4 table tr th {
+  padding: 0.5em;
+  border: 1px solid #343a40;
+  text-transform: capitalize;
+}
+
+.cv {
+  min-height: 600px;
+}
+.cv img {
+  width: 150px;
+  border-radius: 4px;
+}
+.cv .description-1 {
+  text-align: justify;
+}
+.cv .learned {
+  width: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+// import here
+@use "../../costumize" as *;
+@use "../../components/mixins" as *;
+
+// cv section
+.cv {
+    min-height: 600px;
+
+    img {
+        width: 150px;
+        border-radius: 4px;
+    }
+
+    .description-1 {
+        text-align: justify;
+    }
+
+    .learned {
+        width: 75px;
+    }
+}

@@ -42,6 +42,7 @@ function RSPComponent(list) {
         </div>
     `;
 
+    // encapsulation
     this.setTemplate = parent => {
         let main = this.main;
         let side = '';

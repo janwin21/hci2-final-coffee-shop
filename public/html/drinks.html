@@ -21,6 +21,7 @@
 
     <!-- JS Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- JQuery CDN -->
+    <script src="../../dist/bundle.js"></script><!-- FIREBASE APP -->
     <script src="../js/model/product.js"></script><!-- Product Model -->
     <script src="../js/model/order.js"></script><!-- Order Model -->
     <script src="../js/pages/drinks.js"></script><!-- Drinks Page -->
@@ -31,23 +32,20 @@
         <div class="container">
 
             <!-- Navbar Brand -->
-            <a class="navbar-brand kaushan-script" href="#">Coffee</a>
+            <a class="navbar-brand kaushan-script" href="./home.html">48 Coffee</a>
 
             <!-- Navbar Nav -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
-                <li class="nav-item"><a class="nav-link open-sans ms-2 active" aria-current="page" href="#">
+                <li class="nav-item"><a class="nav-link open-sans ms-2 active" aria-current="page" href="./home.html">
                     Home
                 </a></li>
                 <li class="nav-item"><a class="nav-link open-sans ms-2" href="#">
                     Drinks
                 </a></li>
-                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#benefits">
-                    Benefits
+                <li class="nav-item"><a class="nav-link open-sans ms-2" href="./costumers.html">
+                    Costumers
                 </a></li>
-                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#coffee-detail">
-                    Restaurants
-                </a></li>
-                <li class="nav-item"><a class="nav-link open-sans ms-2" href="#">
+                <li class="nav-item"><a class="nav-link open-sans ms-2" href="./about.html">
                     About Us
                 </a></li>
             </ul>
@@ -56,13 +54,13 @@
 
     <!-- TOP Selection Section -->
     <div class="top container-fluid d-flex flex-column justify-content-center align-items-center">
-        <!-- 1st Trigger 
+        <!-- 1st Trigger -->
         <div class="start container text-center">
             <button type="button" class="btn btn-success shadow-none open-sans px-5 py-2">Fill-up your Personal Information before to Proceed...</button>
             <p class="open-sans mt-3">[ Click the Button ]</p>
-        </div> -->
+        </div>
 
-        <div class="form container text-center pt-5 mt-5">
+        <div class="form container text-center pt-5 mt-5 remove">
             <!-- 2nd Trigger -->
             <form class="name mb-5">
                 <div class="row justify-content-center">
@@ -82,10 +80,10 @@
                                 <label class="text-start w-100 mb-2 open-sans" for="lastname">Last Name</label>
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="firstname">
+                                <input class="w-100" type="text" name="firstname" placeholder="first name">
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="lastname">
+                                <input class="w-100" type="text" name="lastname" placeholder="last name">
                             </div>
                         </div>
                         <div class="row pb-5">
@@ -96,20 +94,20 @@
                                 <label class="text-start w-100 mb-2 open-sans" for="contact">Cellphone / Telephone No</label>
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="email">
+                                <input class="w-100" type="text" name="email" placeholder="email">
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="contact">
+                                <input class="w-100" type="text" name="contact" placeholder="contact">
                             </div>
                         </div>
 
-                        <a href="#address"><button type="button" class="address col-lg-6 btn btn-success shadow-none open-sans px-5 py-2">Fill-up your Personal Information before to Proceed...</button></a>
+                        <a href="#address" id="address"><button type="button" class="address col-lg-6 btn btn-success shadow-none open-sans px-5 py-2">Fill-up your Personal Information before to Proceed...</button></a>
                     </div>
 
                     <!-- Address Information -->
-                    <div class="secondary flex-column justify-content-center align-items-center pt-5" id="address">
+                    <div class="secondary flex-column justify-content-center align-items-center pt-5">
                         <object class="my-5" data="../svg/address.svg"></object>
-                        <h3 class="text-light open-sans">Your Location</h3>
+                        <h3 class="text-light open-sans">Location Details</h3>
                         <p class="text-light open-sans">Fill your exact Address here.</p>
                     </div>
                     
@@ -122,10 +120,10 @@
                                 <label class="text-start w-100 mb-2 open-sans" for="street">Street Name</label>
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="streetNo">
+                                <input class="w-100" type="text" name="streetNo" placeholder="street number">
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="street">
+                                <input class="w-100" type="text" name="street" placeholder="street">
                             </div>
                         </div>
                         <div class="row pb-5">
@@ -136,10 +134,10 @@
                                 <label class="text-start w-100 mb-2 open-sans" for="city">City</label>
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="barangay">
+                                <input class="w-100" type="text" name="barangay" placeholder="barangay">
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="city">
+                                <input class="w-100" type="text" name="city" placeholder="city">
                             </div>
                         </div>
                         <div class="row pb-5">
@@ -150,18 +148,18 @@
                                 <label class="text-start w-100 mb-2 open-sans" for="zipCode">Zip Code</label>
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="province">
+                                <input class="w-100" type="text" name="province" placeholder="province">
                             </div>
                             <div class="col-lg-6">
-                                <input class="w-100" type="text" name="zipCode">
+                                <input class="w-100" type="text" name="zipCode" placeholder="zip code">
                             </div>
                         </div>
 
-                        <a href="#shop"><button type="button" class="shop col-lg-6 btn btn-success shadow-none open-sans px-5 py-2">Choose your drinks</button></a>
+                        <a href="#shop" id="shop"><button type="button" class="shop col-lg-6 btn btn-success shadow-none open-sans px-5 py-2">Choose your drinks</button></a>
                     </div>
 
                     <!-- Coffee Information -->
-                    <div class="coffee flex-column justify-content-center align-items-center pt-5" id="shop">
+                    <div class="coffee flex-column justify-content-center align-items-center pt-5">
                         <object class="my-5" data="../svg/coffee.svg"></object>
                         <h3 class="text-light open-sans">Hot Coffee</h3>
                         <p class="text-light open-sans">Order here.</p>
@@ -170,7 +168,7 @@
                     <div class="fill fill-3 col-lg-12 px-5 py-5"></div>
 
                     <!-- Confirmation -->
-                    <div class="confirm flex-column justify-content-center align-items-center pt-5" id="shop">
+                    <div class="confirm flex-column justify-content-center align-items-center pt-5">
                         <object class="my-5" data="../svg/confirm.svg"></object>
                         <h3 class="text-light open-sans">Confirm your order.</h3>
                         <p class="text-light open-sans">Check all the information before click the confirm button.</p>
@@ -189,13 +187,13 @@
         <div class="container pt-3 pb-5">
             <div class="text-center"><i class="fa-solid fa-mug-saucer py-2"></i></div>
             <div class="row mt-3 pt-4 first">
-                <div class="col-lg-4 pe-5">
+                <div class="col-sm-6 col-md-4 col-lg-4 pe-5">
                     <h5 class="mb-4"><i class="fa-solid fa-user-graduate me-3"></i>For Education</h5>
                     <p class="lato">Education, freedom and knowledge. These are the pillars for higher learning, but have often been used to describe some open source projects and services that have the potential to be abused by those that are not so innocent. Over the last two years, tools like stressers, Remote Administration Tools (RAT) and ransomware have been published under these pretenses, but do they serve a legitimate purpose?</p>
                     <h5 class="mb-4"><i class="fa-solid fa-tv mt-5 me-3"></i>IT22S3 - HCI2</h5>
                     <p class="lato">Human–computer interaction (HCI) is research in the design and the use of computer technology, which focuses on the interfaces between people (users) and computers. HCI researchers observe the ways humans interact with computers and design technologies that allow humans to interact with computers in novel ways.</p>
                 </div>
-                <div class="col-lg-4 pe-5">
+                <div class="col-sm-6 col-md-4 col-lg-4 pe-5">
                     <h5 class="mb-4"><i class="fa-solid fa-cat me-3"></i>Categories</h5>
                     <ul>
                         <li><p class="m-0 p-0">Coffee</p></li>
@@ -207,7 +205,7 @@
                         <li><p class="m-0 p-0">Payment</p></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="footer-content col-sm-6 col-md-4 col-lg-4">
                     <h5 class="mb-4"><i class="fa-solid fa-newspaper me-3"></i>Content</h5>
                     <ul>
                         <li><p class="m-0 p-0">Drinks</p></li>
@@ -216,7 +214,7 @@
                         <li><p class="m-0 p-0">Tea</p></li>
                         <li><p class="m-0 p-0">Soda</p></li>
                     </ul>
-                    <h5 class="my-4"><i class="fa-solid fa-tags mt-2 me-3"></i>Tags</h5>
+                    <h5 class="footer-tags my-4"><i class="fa-solid fa-tags mt-2 me-3"></i>Tags</h5>
                     <ul class="d-flex flex-row flex-wrap p-0 m-0">
                         <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">HTML</p></li>
                         <li class="me-1"><p class="alert alert-secondary text-light m-0 px-2 py-1">CSS</p></li>
@@ -236,13 +234,13 @@
         <div class="container text-center">
             <h5 class="pb-4 pt-2 mt-5 open-sans">Powered By:</h5>
             <div class="row mb-5">
-                <div class="powered col-lg-4">
+                <div class="powered col-4 col-sm-4 col-md-4 col-lg-4">
                     <i class="fa-brands fa-js-square"></i>
                 </div>
-                <div class="powered col-lg-4">
+                <div class="powered col-4 col-sm-4 col-md-4 col-lg-4">
                     <i class="fa-brands fa-bootstrap"></i>
                 </div>
-                <div class="powered col-lg-4">
+                <div class="powered col-4 col-sm-4 col-md-4 col-lg-4">
                     <i class="fa-solid fa-database"></i>
                 </div>
             </div>

@@ -11,7 +11,7 @@ function Product(products) {
             {{ cards-template }}
             <div class="col-lg-12 text-start px-4 mt-5">
                 <h5 class="open-sans">Total: <strong>0</strong> pesos</h5>
-                <button type="button" class="btn btn-primary px-5 py-1 mt-2 shadow-none" id="order">Order Drinks</button>
+                <a href="#confirm" id="confirm"><button type="button" class="btn btn-primary px-5 py-1 mt-2 shadow-none" id="order">Order Drinks</button></a>
             </div>
         </div>
     `;

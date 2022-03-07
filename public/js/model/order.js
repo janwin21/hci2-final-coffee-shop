@@ -39,6 +39,29 @@ function Order(costumer) {
         </tr>
     `;
 
+    this.queue = ` 
+        <!-- Queue Template -->   
+        <div class="text-start pt-5">
+            <h4>Costumer ID {{ id }}</h4>
+            <p class="mt-4">Costumer Name: <strong class="ms-2">{{ firstname }} {{ lastname }}</strong></p>
+            <p>Costumer Email: <strong class="ms-2">{{ email }}</strong></p>
+            <p>Contact Number: <strong class="ms-2">{{ contact }}</strong></p>
+
+            <h4 class="mt-5 mb-4">Ordered Coffee</h4>
+            <table class="w-100">
+                <tr>
+                    <th>Coffee</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+                {{ products-template }}
+            </table>
+
+            <p class="mt-3 mb-5">Payment: <strong class="ms-2">{{ pay }} pesos</strong></p>
+        </div>
+    `;
+
     // encapsulation
     this.setTemplate = parent => {
         let product_text = '';
@@ -68,5 +91,37 @@ function Order(costumer) {
                 .replace('{{ pay }}', this.costumer.pay)
                 .replace('{{ products-template }}', product_text)
         );
+    };
+
+    this.setQueue = (parent, customers) => {
+
+        let queue = '';
+        
+        customers.forEach(costumer => {
+
+            let product_text = '';
+    
+            costumer.products.forEach(product => {
+                if(product.quantity != 0) {
+                    product_text += this.product
+                        .replace('{{ name }}', product.name)
+                        .replace('{{ price }}', product.price / product.quantity)
+                        .replace('{{ quantity }}', product.quantity)
+                        .replace('{{ total }}', product.price);
+                }
+            });
+
+            queue += this.queue
+                .replace('{{ id }}', costumer.id)
+                .replace('{{ firstname }}', costumer.firstname)
+                .replace('{{ lastname }}', costumer.lastname)
+                .replace('{{ email }}', costumer.email)
+                .replace('{{ pay }}', costumer.pay)
+                .replace('{{ contact }}', costumer.contact)
+                .replace('{{ products-template }}', product_text);
+        });
+
+        parent.html(queue);
+
     };
 }

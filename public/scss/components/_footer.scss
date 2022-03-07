@@ -12,6 +12,12 @@ footer {
     .first, .copyright { border-top: 1px solid $light; }
     object { width: 250px; }
 
+    @include media-breakpoint-down(md) {
+        .footer-content, .footer-tags {
+            margin-top: 2rem;
+        }
+    }
+
     ul { 
         list-style-type: none; 
         padding: 0 !important; 

@@ -5,6 +5,7 @@
 $(document).ready(() => {
 
     // invisible elements
+    const form = $('.form');
     const secondary = $('.secondary');
     const fill_2 = $('.fill-2');
     const coffee = $('.coffee');
@@ -12,16 +13,19 @@ $(document).ready(() => {
     const fill_4 = $('.fill-4');
     const confirm = $('.confirm');
 
+    form.hide();
+    secondary.hide();
     fill_2.hide();
     coffee.hide();
     fill_3.hide();
     fill_4.hide();
     confirm.hide();
-    secondary.hide();
 
     // first trigger => click the button
     $('.start').on('click', 'button', event => {
+        form.removeClass('remove');
         $(event.currentTarget).parent().fadeOut(250);
+        form.slideDown(250);
     });
 
     // second trigger => personal form
@@ -97,40 +101,4 @@ $(document).ready(() => {
             .children().last().find('h5');    
         h5.html(`Total: <strong>${total}</strong> pesos`);
     });
-
-    const costumer = {}; // main costumer to save from the firebase
-
-    // trigger order
-    fill_3.on('click', '#order', event => {
-        let confirm_total = 0;
-        const product_collection = [];
-
-        // loop all inputs for confirmation
-        const inputs = $('input[type=text], input[type=email]');
-        const orders = $('input[type=number]');
-
-        inputs.each((index, element) => {
-            costumer[$(element).attr('name')] = element.value;
-        });
-
-        orders.each((index, element) => {
-            let quantity = Number.parseInt(element.value);
-            let price = Number.parseInt(element.dataset.price) * quantity;
-            confirm_total += price;
-
-            product_collection.push({
-                name: element.dataset.name,
-                price: price,
-                quantity: quantity
-            });
-
-            costumer.products = product_collection;
-            costumer.pay = confirm_total;
-        });
-
-        new Order(costumer).setTemplate(fill_4.find('.text-start'));
-        confirm.slideDown(250);
-        fill_4.slideDown(250);
-    })
-
 });
